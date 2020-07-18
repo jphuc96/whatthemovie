@@ -12,3 +12,5 @@ kustomize edit set image main=jphuc96/whatthemovie:$COMMIT_HASH
 kustomize build | kubectl apply -f -
 
 cd $HERE
+
+git commit -a -m "newTag -> $COMMIT_HASH"

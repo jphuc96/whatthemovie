@@ -7,4 +7,4 @@ resources:
 images:
 - name: main
   newName: jphuc96/whatthemovie
-  newTag: 627ab86d4a
+  newTag: cceca15ceb
