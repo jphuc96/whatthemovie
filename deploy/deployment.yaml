@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: whatthemovie
+  name: whatthemovie
+  namespace: whatthemovie
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: whatthemovie
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: whatthemovie
+    spec:
+      containers:
+      - image: jphuc96/whatthemovie:latest
+        name: main
+        ports:
+          - containerPort: 80
+            name: http
+        resources:
+          limits:
+            cpu: 100m
+            memory: 128Mi
+status: {}
